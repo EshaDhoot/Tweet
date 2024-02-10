@@ -16,9 +16,9 @@ const setupAndStartServer = () => {
         // });
         // console.log(tweet);
 
-        const tweetRepo = new TweetRepository();
-        const tweet = await tweetRepo.getWithComments("65c50d8993817084c936b6a2");
-        console.log(tweet);
+        // const tweetRepo = new TweetRepository();
+        // const tweet = await tweetRepo.getAll(0,4);
+        // console.log(tweet[0].contentWithEmail);
         // tweet.comments.push({content: 'comment model setup'});
         // await tweet.save();
         // console.log(tweet);
