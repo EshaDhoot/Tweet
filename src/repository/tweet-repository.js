@@ -1,4 +1,4 @@
-const Tweet = require('../models/tweet-model');
+const Tweet = require('../models/tweet');
 
 class TweetRepository {
 
