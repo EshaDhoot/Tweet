@@ -1,20 +1,21 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import { connect } from './config/database.js';
+
+import apiRoutes from './routes/index.js';
+
 const app = express();
-import service from './services/tweet-service.js'
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use('/api', apiRoutes);
 
 const setupAndStartServer = () => {
     app.listen(3000, async () => {
         console.log("Server started at PORT: 3000");
         await connect();
-        console.log('MongoDB connected');    
-        const ser = new service();
-        await ser.create({
-            content: 'my other #COdE works or #NOT ?'
-        })
-       
-
-
+        console.log('MongoDB connected');   
 
     });
 }
