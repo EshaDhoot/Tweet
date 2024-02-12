@@ -14,7 +14,7 @@ router.get('/tweets', getTweet);
 
 router.post('/likes/toggle', toggleLike);
 
-router.post('/comments', createComment);
+router.post('/comments', authenticate, createComment);
 
 router.post('/signup', signUp);
 router.post('/login', logIn);
