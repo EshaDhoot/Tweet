@@ -14,7 +14,7 @@ export const createComment = async(req, res) => {
     } catch (error) {
         return res.status(500).json({
             success: false,
-            message: 'Unable to create a new tweet',
+            message: 'Unable to create a new comment',
             err: error,
             data: {}
         });
